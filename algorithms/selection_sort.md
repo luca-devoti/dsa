@@ -86,7 +86,7 @@ def selection_sort_smallest(arr):
 
 ---
 
-| Pass | Array State | # of comparisons to locate largest | # of swaps |
+| Pass | Array Outcome State | # of comparisons to locate largest | # of swaps |
 |---|---|---|---|
 | 1st pass | [7, 6, 3, 2, **9**] | 4 | 1 |
 | 2nd pass | [2, 6, 3, **7, 9**] | 3 | 1 |
