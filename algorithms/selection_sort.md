@@ -81,17 +81,17 @@ def selection_sort_smallest(arr):
 ### Initial Array
 
 ```py
-[9, 7, 6, 3, 2]
+[7, 3, 2, 9, 6]
 ```
 
 ---
 
 | Pass | Resulting Array State | # of Comparisons to Locate Largest | # of Swaps |
 |---|---|---|---|
-| 1st pass | [7, 6, 3, 2, **9**] | 4 | 1 |
-| 2nd pass | [2, 6, 3, **7, 9**] | 3 | 1 |
+| 1st pass | [7, 3, 2, 6, **9**] | 4 | 1 |
+| 2nd pass | [6, 3, 2, **7, 9**] | 3 | 1 |
 | 3rd pass | [2, 3, **6, 7, 9**] | 2 | 1 |
-| 4th pass | [2, **3, 6, 7, 9**] | 1 | 0 |
+| 4th pass | [2, **3, 6, 7, 9**] | 1 | 1 |
 
 ---
 
