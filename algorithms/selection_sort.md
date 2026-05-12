@@ -19,7 +19,7 @@
 
 ---
 
-## Python Code - Sort By Largest
+## Python Code - Sort by Largest
 
 ```py
 def selection_sort_largest(arr):
@@ -35,7 +35,7 @@ def selection_sort_largest(arr):
     return arr
 ```
 
-## Python Code - Sort By Smallest
+## Python Code - Sort by Smallest
 
 ```py
 def selection_sort_smallest(arr):
@@ -71,7 +71,7 @@ def selection_sort_smallest(arr):
 
 ---
 
-## Visualisation - Sort By Largest
+## Visualisation - Sort by Largest
 
 ![Selection Sort Animation](../visualisations/selection_sort.gif)
 
@@ -86,7 +86,7 @@ def selection_sort_smallest(arr):
 
 ---
 
-| Pass | Array Outcome State | # of comparisons to locate largest | # of swaps |
+| Pass | Resulting Array State | # of Comparisons to Locate Largest | # of Swaps |
 |---|---|---|---|
 | 1st pass | [7, 6, 3, 2, **9**] | 4 | 1 |
 | 2nd pass | [2, 6, 3, **7, 9**] | 3 | 1 |
