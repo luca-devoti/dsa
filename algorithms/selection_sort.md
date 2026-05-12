@@ -19,23 +19,13 @@
 
 ---
 
-## Python Code - Sort By Largest:
+## Python Code - Sort By Largest
 
-```py
-def selection_sort_largest(arr):
-    for i in range(len(arr) - 1, 0, -1):
-        max_idx = 0
-        
-        for j in range(1, i + 1):
-            if arr[j] > arr[max_idx]:
-                max_idx = j
-
-        arr[i], arr[max_idx] = arr[max_idx], arr[i]
-
-    return arr
+```python
+![[selection_sort_smallest.py]]
 ```
 
-## Python Code - Sort By Smallest:
+## Python Code - Sort By Smallest
 
 ```py
 def selection_sort_smallest(arr):
@@ -57,142 +47,43 @@ def selection_sort_smallest(arr):
 
 | Case | Complexity | Explanation |
 |---|---|---|
-| Best Case | \(O(n^2)\) | jflksahfks hfklsfksd hfhsdlfjk sdhjkfhsdl fsldfhsadkjfhsd |
-| Average Case | o | jflksahfks hfklsfksd hfhsdlfjk sdhjkfhsdl fsldfhsadkjfhsd |
-| Worst Case | o | jflksahfks hfklsfksd hfhsdlfjk sdhjkfhsdl fsldfhsadkjfhsd |
+| Best Case | $O(n^2)$ | Even if the array is already sorted, Selection Sort still performs all comparisons. |
+| Average Case | $O(n^2)$ | The algorithm repeatedly scans the unsorted portion of the array to locate the minimum/maximum value. |
+| Worst Case | $O(n^2)$ | Even when the array is in reverse order, the same number of comparisons are still required. |
 
 ---
 
 ## Space Complexity
 
-| Complexity | |
+| Space Complexity | Explanation |
 |---|---|
-| Space | |
-
-### Explanation
-> Explain memory usage.
+| $O(1)$ | Selection Sort sorts the array in-place, so it does not require additional memory that grows with the size of the input. |
 
 ---
 
-# Example Run Through
+## Visualisation - Sort By Largest
 
-## Initial Array
+![Selection Sort Animation](../visualisations/selection_sort.gif)
 
-```text
-[]
+---
+## Example Run Through - Sort By Largest
+
+### Initial Array
+
+```py
+[9, 7, 6, 3, 2]
 ```
 
 ---
 
-## 1st Pass
-
-### Find Minimum
-> Explain what values are checked.
-
-### Swap
-```text
-[]
-```
-
-### Comparisons
--
-
-### Swaps
--
-
----
-
-## 2nd Pass
-
-### Find Minimum
-> Explain what values are checked.
-
-### Swap
-```text
-[]
-```
-
-### Comparisons
--
-
-### Swaps
--
-
----
-
-## 3rd Pass
-
-### Find Minimum
-> Explain what values are checked.
-
-### Swap
-```text
-[]
-```
-
-### Comparisons
--
-
-### Swaps
--
-
----
-
-# Total Operations
-
-## Total Comparisons
-
-```text
-formula here
-```
-
-### Example
-```text
-example calculation
-```
-
----
-
-## Total Swaps
-
-```text
-formula here
-```
-
----
-
-# Characteristics
-
-## Advantages
-- 
-- 
-- 
-
-## Disadvantages
-- 
-- 
-- 
-
----
-
-# Stability
-- Stable / Not Stable
-- Explanation:
-
----
-
-# In-Place?
-- Yes / No
-- Explanation:
-
----
-
-# When To Use
-- 
-- 
-- 
+| Pass | Array State | # of comparisons to locate largest | # of swaps |
+|---|---|---|---|
+| 1st pass | [7, 6, 3, 2, **9**] | 4 | 1 |
+| 2nd pass | [2, 6, 3, **7, 9**] | 3 | 1 |
+| 3rd pass | [2, 3, **6, 7, 9**] | 2 | 1 |
+| 4th pass | [2, **3, 6, 7, 9**] | 1 | 0 |
 
 ---
 
 # Notes
-> Extra observations, tips, or exam notes.
+> N/A.
