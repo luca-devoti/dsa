@@ -21,8 +21,18 @@
 
 ## Python Code - Sort By Largest
 
-```python
-![[selection_sort_smallest.py]]
+```py
+def selection_sort_largest(arr):
+    for i in range(len(arr) - 1, 0, -1):
+        max_idx = 0
+        
+        for j in range(1, i + 1):
+            if arr[j] > arr[max_idx]:
+                max_idx = j
+
+        arr[i], arr[max_idx] = arr[max_idx], arr[i]
+
+    return arr
 ```
 
 ## Python Code - Sort By Smallest
