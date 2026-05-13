@@ -95,5 +95,5 @@ def selection_sort_smallest(arr):
 
 ---
 
-# Notes
+## Notes
 > N/A.

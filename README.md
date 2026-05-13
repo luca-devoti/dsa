@@ -6,6 +6,8 @@ A place to store my Data Structures & Algorithms notes.
 
 # To Do
 
+[] Stack ADT algorithms python code
+
 | Done | Algorithm | Best Case | Average Case | Worst Case | Space Complexity |
 |---|---|---|---|---|---|
 | [x] | Selection Sort | O(n²) | O(n²) | O(n²) | O(1) |
