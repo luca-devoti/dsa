@@ -69,7 +69,7 @@ def selection_sort_smallest(arr):
 
 ## Visualisation - Sort by Largest
 
-![Selection Sort Animation](../visualisations/selection_sort.gif)
+![Selection Sort Animation](/visualisations/selection_sort.gif)
 
 ---
 ## Example Run Through - Sort By Largest

@@ -70,7 +70,7 @@ Best Case | $O(n)$ | If no swaps are made during the first pass, the array is al
 
 ## Visualisation
 
-![Bubble Sort Animation](../visualisations/bubble_sort.gif)
+![Bubble Sort Animation](/visualisations/bubble_sort.gif)
 
 ---
 
