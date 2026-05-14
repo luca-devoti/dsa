@@ -74,7 +74,6 @@ class Stack:
 ---
 
 ## Where it's useful
-[stack algorithms]
 - [Postfix Expression Evaluation](../algorithms/stack/stack_algorithms.md#postfix-expression-evaluation)
 - [Infix to Postfix Conversion](../algorithms/stack/stack_algorithms.md#infix-to-postfix-conversion)
 - [Balanced Brackets/Braces](../algorithms/stack/stack_algorithms.md#balanced-brackets/braces)

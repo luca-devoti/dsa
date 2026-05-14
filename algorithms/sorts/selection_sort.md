@@ -9,13 +9,13 @@
 - The array is divided into a **sorted** and **unsorted** portion.
 - Selection Sort can sort by either the **smallest** or **largest** value each pass.
 - In this example, we sort by the **largest** value, so:
-  - the sorted portion grows from the right
-  - the unsorted portion shrinks from the left
+  - The sorted portion grows from the right.
+  - The unsorted portion shrinks from the left.
 
-1. Find the largest value in the unsorted portion.
-2. Swap it with the last unsorted element.
-3. Increase the sorted portion by one.
-4. Repeat until only one unsorted element remains, indicating the array is sorted.
+1. Iterate through the unsorted portion of the array and find the largest element.
+2. Swap the largest element with the last element in the unsorted portion.
+3. Shrink the unsorted portion by one element.
+4. Repeat until only one unsorted element remains.
 
 ---
 
@@ -31,8 +31,6 @@ def selection_sort_largest(arr):
                 max_idx = j
 
         arr[i], arr[max_idx] = arr[max_idx], arr[i]
-
-    return arr
 ```
 
 ## Python Code - Sort by Smallest
@@ -47,8 +45,6 @@ def selection_sort_smallest(arr):
                 min_idx = j
 
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
-
-    return arr
 ```
 
 ---

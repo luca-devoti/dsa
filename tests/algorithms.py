@@ -23,3 +23,24 @@ def selection_sort_smallest(arr):
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
 
     return arr
+
+# Bubble Sort Default
+def bubble_sort_default(arr): 
+    for index in range(len(arr) - 1, 0, -1):
+        for i in range(index):
+            if arr[i] > arr[i + 1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+    return arr
+
+# Bubble Sort Optimised
+def bubble_sort_optimised(arr): 
+    for index in range(len(arr) - 1, 0, -1):
+        swapped = False
+        for i in range(index):
+            if arr[i] > arr[i + 1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                swapped = True
+        if not swapped:
+            break
+    return arr
+
