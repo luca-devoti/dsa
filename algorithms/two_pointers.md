@@ -1,3 +1,12 @@
+# Two Pointers
+
+## Description
+
+---
+
+## Python Code
+
+```py
 def two_sum(arr, target):
     # Sort the array
 
@@ -17,3 +26,6 @@ def two_sum(arr, target):
 
     # If no pair is found
     return False
+```
+
+---
