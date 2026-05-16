@@ -32,7 +32,7 @@ def rate(n):
 
 ---
 
-## Step 1 - Count Operations of the Inner Loop
+## Step 1 - Inner Loop
 
 ```py
 # j = 1
