@@ -89,7 +89,7 @@ Best Case | $O(n)$ | If no swaps are made during the first pass, the array is al
 | 2nd pass | [83, 32, 25, 27, **96, 97**] | 4 | 3 |
 | 3rd pass | [32, 25, 27, **83, 96, 97**] | 3 | 3 |
 | 4th pass | [25, 27, **32, 83, 96, 97**] | 2 | 2 |
-| 5th pass | [25, **27, 32, 83, 96, 97**] | 1 | 0 |
+| 5th pass | [**25, 27, 32, 83, 96, 97**] | 1 | 0 |
 
 ---
 

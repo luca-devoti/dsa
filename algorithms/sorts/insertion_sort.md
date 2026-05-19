@@ -6,7 +6,7 @@
 ---
 
 ## Key Idea
-- The array is divided into a **sorted** and **unsorted** portion.
+- The array is divided into a **sorted** (left) and **unsorted** (right) portion.
 1. Select the first element from the unsorted portion.
 2. Compare the selected element with elements in the sorted portion, moving from right to left.
 3. While an element in the sorted portion is greater than the selected element, shift it one position to the right.
@@ -16,4 +16,65 @@
 
 ---
 
-```Python Code
+## Python Code
+
+```py
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+            
+        arr[j + 1] = key
+```
+
+---
+
+## Time Complexity
+
+| Case | Complexity | Explanation |
+|---|---|---|
+| Best Case | $O(n)$ | If the array is already sorted, the inner while loop never shifts elements, so only one pass through the array is needed. |
+| Average Case | $O(n^2)$ | On average, each element must shift partway through the sorted portion of the array. |
+| Worst Case | $O(n^2)$ | If the array is reverse sorted, each element must shift through the entire sorted portion of the array. |
+
+---
+
+## Space Complexity
+
+| Space Complexity | Explanation |
+|---|---|
+| $O(1)$ | Insertion Sort sorts the array in place and only uses a small, constant amount of extra memory for variables such as `key` and `j`. |
+
+---
+
+## Visualisation
+
+N/A
+
+---
+
+## Example Run Through
+
+### Initial Array
+
+```py
+[10, 7, 9, 5, 6]
+```
+
+---
+
+| Pass | Resulting Array State | # of Comparisons | # of Shifts |
+|---|---|---|---|
+| 1st pass | [**7, 10**, 9, 5, 6] | 1 | 1 |
+| 2nd pass | [**7, 9, 10**, 5, 6] | 2 | 1 |
+| 3rd pass | [**5, 7, 9, 10**, 6] | 3 | 3 |
+| 4th pass | [**5, 6, 7, 9, 10**] | 4 | 3 |
+
+---
+
+## Notes
+> We assume the first element is already part of the sorted portion and begin from the second element.
