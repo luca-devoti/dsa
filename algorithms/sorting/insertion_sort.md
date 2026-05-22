@@ -53,7 +53,7 @@ def insertion_sort(arr):
 
 ## Visualisation
 
-N/A
+![Insertion Sort Visualisation](/visualisations/insertion_sort.jpg)
 
 ---
 
