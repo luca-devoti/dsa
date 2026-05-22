@@ -12,8 +12,6 @@ A place to store my Data Structures & Algorithms notes.
 
 [] Stack common algorithms' code
 
-[] Insertion Sort Visualisation
-
 
 | Done | Algorithm | Best Case | Average Case | Worst Case | Space Complexity |
 |---|---|---|---|---|---|
