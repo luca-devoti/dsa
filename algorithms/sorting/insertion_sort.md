@@ -55,6 +55,8 @@ def insertion_sort(arr):
 
 ![Insertion Sort Visualisation](/visualisations/insertion_sort.jpg)
 
+![Insertion Sort Visualisation 2](/visualisations/insertion_sort.gif)
+
 ---
 
 ## Example Run Through
