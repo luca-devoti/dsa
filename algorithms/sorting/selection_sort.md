@@ -9,8 +9,8 @@
 - The array is divided into a **sorted** and **unsorted** portion.
 - Selection Sort can sort by either the **smallest** or **largest** value each pass.
 - In this example, we sort by the **largest** value, so:
-  - The sorted portion grows from the right.
-  - The unsorted portion shrinks from the left.
+    - The sorted portion grows from the right.
+    - The unsorted portion shrinks from the left.
 
 1. Iterate through the unsorted portion of the array and find the largest element.
 2. Swap the largest element with the last element in the unsorted portion.

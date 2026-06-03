@@ -9,8 +9,8 @@
 - Bubble Sort has two variations: standard and optimised.
 - This example demonstrates the steps of the **standard** algorithm.
 - The array is divided into a **sorted** and **unsorted** portion.
-  - The sorted portion grows from the right.
-  - The unsorted portion shrinks from the left.
+    - The sorted portion grows from the right.
+    - The unsorted portion shrinks from the left.
 
 1. Compare adjacent elements in the unsorted portion of the array.
 2. If the left element is greater than the right element, swap them.
