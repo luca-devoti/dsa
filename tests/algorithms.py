@@ -57,3 +57,26 @@ def insertion_sort(arr):
         arr[j + 1] = key
     return arr
 
+# Linear Search
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+
+#Binary Search
+def binary_search(numbers, target_value):
+    left = 0
+    right = len(numbers) - 1
+
+    while left <= right:
+        middle = (left + right) // 2
+
+        if numbers[middle] == target_value:
+            return middle
+        elif numbers[middle] > target_value:
+            right = middle - 1
+        else:
+            left = middle + 1
+
+    return -1
