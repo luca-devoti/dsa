@@ -26,3 +26,46 @@ def linear_search(arr, target):
 ---
 
 ## Time Complexity
+
+| Case | Complexity | Explanation |
+|---|---|---|
+| Best Case | $O(1)$ | The element is found at the first position of the array. |
+| Average Case | $O(n)$ | On average, the target is equally likely to be anywhere in the list, so about $\frac{n}{2}$ comparisons are needed before it is found. Therefore, the average-case time complexity is $O(n)$ |
+| Worst Case | $O(n)$ | The element is at the end of the array or not present at all, requiring scanning all elements. |
+
+---
+
+## Space Complexity
+
+| Space Complexity | Explanation |
+|---|---|
+| $O(1)$ | Linear search uses a constant amount of extra memory, only storing a few variables (such as the index and target), regardless of the size of the input list. |
+
+---
+
+## Visualisation
+
+![Linear Search Animation](/visualisations/linear_search.gif)
+
+---
+
+## Example Run Through
+
+### Initial Array - Target value = 32
+```py
+[96, 83, 97, 32, 25, 27]
+```
+
+---
+
+| Step | Element Checked | Comparison | Result          |
+| ---- | --------------- | ---------- | --------------- |
+| 1    | 96              | 96 ≠ 32    | Not found       |
+| 2    | 83              | 83 ≠ 32    | Not found       |
+| 3    | 97              | 97 ≠ 32    | Not found       |
+| 4    | 32              | 32 = 32    | Found (index 3) |
+
+---
+
+## Notes
+> N/A.

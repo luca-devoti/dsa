@@ -77,6 +77,7 @@ Best Case | $O(n)$ | If no swaps are made during the first pass, the array is al
 ## Example Run Through
 
 ### Initial Array
+
 ```py
 [96, 83, 97, 32, 25, 27]
 ```
