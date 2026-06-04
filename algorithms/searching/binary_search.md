@@ -45,7 +45,7 @@ def binary_search(numbers, target_value):
 |---|---|---|
 | Best Case | $O(1)$ | The target value is found at the middle on the first check. |
 | Average Case | $O(\log n)$ | Each comparison eliminates half of the remaining search space. On average, the target is found after logarithmic steps. |
-| Worst Case | $O(n)$ | Even in the worst case, the search space is halved repeatedly until it becomes empty. |
+| Worst Case | $O(\log n)$ | Even in the worst case, the search space is halved repeatedly until it becomes empty. |
 
 ---
 
@@ -66,6 +66,7 @@ def binary_search(numbers, target_value):
 ## Example Run Through
 
 ### Initial Array - Target value = 83
+
 ```py
 [25, 27, 32, 83, 96, 97]
 ```

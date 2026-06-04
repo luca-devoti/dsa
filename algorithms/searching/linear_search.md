@@ -52,6 +52,7 @@ def linear_search(arr, target):
 ## Example Run Through
 
 ### Initial Array - Target value = 32
+
 ```py
 [96, 83, 97, 32, 25, 27]
 ```
