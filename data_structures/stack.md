@@ -56,7 +56,6 @@ class Stack:
 
     def clear(self):
         self.items = []
-
 ```
 
 ---
@@ -66,9 +65,9 @@ class Stack:
 | Case | Complexity | Explanation |
 |---|---|---|
 | peek() | $O(1)$ | The top item is always at the end of the list, so it can be accessed directly. |
-| Search | $O(n)$ | In the worst case, every item in the stack must be checked sequentially. |
 | push(item) | $O(1)$ | Items are only added to the end (top) of the stack, which is a constant-time operation. |
 | pop() | $O(1)$ | Items are only removed from the end (top) of the stack, so no shifting of elements is required. |
+| search | $O(n)$ | In the worst case, every item in the stack must be checked sequentially. |
 
 ---
 
@@ -77,6 +76,12 @@ class Stack:
 | Space Complexity | Explanation |
 |---|---|
 | $O(n)$ | A Stack ADT stores up to n elements, so the memory used grows linearly with the number of items in the stack. |
+
+---
+
+## Visualisation
+
+![Stack ADT Visualisation](/visualisations/stack.gif)
 
 ---
 
