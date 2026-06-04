@@ -1,20 +1,27 @@
 # Stack ADT
 
 ## Description
-> A Stack Abstract Data Type (ADT) is a linear data structure that operates on the LIFO (Last-In, First-Out) principle where the addition of new items and the removal of existing items always takes place at the same end, referred to as the top of the stack.
+> Abstract Data Type (ADT) is a conceptual model. They define what a data structure does without dictating how it does it. By separating the logical properties from the physical implementation, ADTs allow for cleaner, more maintainable code.
+
+> A Stack Abstract Data Type (ADT) is an ordered collection of items which follows the **Last-In, First-Out (LIFO)** property, where the addition of new items and removal of existing items always take place at the same end, referred to as the **top of the stack**.
 
 ---
 
 ## Key Idea
-- A Stack is comprised of two primary operations:
-  - Push — adds a new item to the top of the stack.
-  - Pop — removes the item at the top of the stack.
+- We implement a stack using a Python list, with elements added to and removed from the end of the list, which represents the top of the stack.
+- The basic Stack ADT consists of the following functionality:
 
-- Other common operations include:
-  - Peek — returns the top item without removing it.
-  - is_empty — returns whether the stack contains any items.
-  - size — returns the number of items currently in the stack.
-  - clear — removes all items from the stack.
+1. `Stack()` - Creates and returns a new, empty stack instance.
+2. `push(item)` - Adds a new item to the top of the stack.
+3. `pop()` - Removes and returns the item at the top of the stack.
+4. `peek()` - Returns the item at the top of the stack without removing it.
+5. `is_empty()` - Returns a boolean value indicating whether the stack contains no items.
+6. `size()` - Returns the total number of items currently in the stack.
+
+- Optional methods:
+
+7. `__str__()` - Returns a formatted string representation of the stack.
+8. `clear()` - Removes all items from the stack.
 
 ---
 
@@ -39,7 +46,7 @@ class Stack:
     def peek(self):
         if self.is_empty():
             raise IndexError('ERROR: The stack is empty!')
-        return self.items[len(self.items) - 1]
+        return self.items[-1]
 
     def size(self):
         return len(self.items)        
@@ -58,10 +65,10 @@ class Stack:
 
 | Case | Complexity | Explanation |
 |---|---|---|
-| Access / Peak | $O(1)$ | The top item is always at the end of the list, so it can be accessed directly. |
+| peek() | $O(1)$ | The top item is always at the end of the list, so it can be accessed directly. |
 | Search | $O(n)$ | In the worst case, every item in the stack must be checked sequentially. |
-| Insertion | $O(1)$ | Items are only added to the end (top) of the stack, which is a constant-time operation. |
-| Deletion | $O(1)$ | Items are only removed from the end (top) of the stack, so no shifting of elements is required. |
+| push(item) | $O(1)$ | Items are only added to the end (top) of the stack, which is a constant-time operation. |
+| pop() | $O(1)$ | Items are only removed from the end (top) of the stack, so no shifting of elements is required. |
 
 ---
 

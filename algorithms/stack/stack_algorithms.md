@@ -1,5 +1,10 @@
 # Common Stack ADT Algorithms
 
+## Descrption
+> This document contains common examples and code solutions that use the Stack ADT. If you're unfamiliar with the Stack ADT, please read [the Stack ADT Notes](../../data_structures/stack.md) first.
+
+> Some examples also use terminology such as infix and postfix expressions; if these concepts are unfamiliar, refer to [the Expression Notation Notes](../../miscellaneous/expression_notations.md) before continuing.
+
 ## Balanced Brackets/Braces
 1. Initialise an empty stack.
 2. For every character:
