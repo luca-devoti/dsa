@@ -28,17 +28,19 @@ A place to store my Data Structures & Algorithms notes.
 | [ ] | Tim Sort | O(n) | O(n log n) | O(n log n) | O(n) |
 | [ ] | Tree Sort | O(n log n) | O(n log n) | O(n²) | O(n) |
 | [ ] | Cube Sort | O(n) | O(n log n) | O(n log n) | O(n) |
-| 
+| |
 | [x] | Stack ADT
 | [] | Stack common algorithms' code
-| 
+| [x] | Queue ADT
+| |
 | [x] | Linear Search
 | [x] | Binary Search
-| 
+| |
 | [x] | Counting Primitive Operations
 | [x] | Expression Notations
-| 
+| |
 | [] | Stack code tests
+| [] | Queue code tests
 
 
 ---
