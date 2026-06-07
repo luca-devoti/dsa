@@ -32,6 +32,7 @@ A place to store my Data Structures & Algorithms notes.
 | [x] | Stack ADT
 | [] | Stack common algorithms' code
 | [x] | Queue ADT
+| [x] | Linked List ADT
 | |
 | [x] | Linear Search
 | [x] | Binary Search
