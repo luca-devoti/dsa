@@ -111,7 +111,8 @@ class LinkedList:
 
 ---
 
-> Notes: When modifying a linked list, it is important to always ensure that the links between nodes are maintained before changing them. If a link is lost, the rest of the list can become inaccessible.
+## Notes: 
+>When modifying a linked list, it is important to always ensure that the links between nodes are maintained before changing them. If a link is lost, the rest of the list can become inaccessible.
 
 > For example, when removing a node, you should first update the previous node’s `next` reference to point to the node after the one being removed. If you instead set the removing node’s `next` to `None` first, you lose access to the rest of the list.
 
