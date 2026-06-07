@@ -6,20 +6,20 @@
 > A Linked List Abstract Data Type (ADT) is a linear collection of items consisting of **nodes**, where each node contains data and a reference (link) to the next node in the sequence. Items are connected through these links rather than being stored in consecutive memory locations, as they are in an array-based list. 
 
 ## Key Idea
-- The first node is referred to as the head of the linked list, and the final node points to None, indicating the end of the list.
+- The first node in a linked list is referred to as the head of the list, and the final node in the sequence points to None, indicating the end of the list.
 - A Linked List, in comparison to a normal array-based list, allows for efficient insertion and removal of items, as there is no need to shift existing data. Instead, we simply update the references (links) between nodes by adjusting their next values.
-- To make use of a LinkedList ADT, we must first define a Node class that offers the following functionality:
+- To implement a Linked List ADT, we must first define a Node class that provides the following functionality:
 
-1. `Node(data, next)` - Creates and returns a new node instance with the provided data, and pointing to a next node (if left blank set to None)
+1. `Node(data, next)` - Creates and returns a new node instance with the provided data, and a reference to the next node. If no next node is provided, it is set to None.
 
 - The LinkedList ADT consists of the following functionality:
 
 1. `LinkedList()` - Creates and returns a new linked list instance. 
-2. `add(item)` - Adds a new item to the front of the linked list.
-3. `remove(item)` - Removes the item from the linked list.
-4. `search(item)` - Searches for the item in the linked list and returns a boolean whether it is found
-5. `is_empty()` - Returns a boolean value indicating whether the linked list contains any items.
-6. `size()` - Returns the number of items in the linked list.
+2. `add(item)` - Adds a new item to the front (head) of the linked list.
+3. `remove(item)` - Removes the specified item from the linked list, if it exists.
+4. `search(item)` - Searches for the item in the linked list and returns True if it is found, otherwise False.
+5. `is_empty()` - Returns True if the linked list contains no items, otherwise False.
+6. `size()` - Returns the number of items currently stored in the linked list.
 
 ---
 
@@ -58,7 +58,7 @@ class LinkedList:
                 previous = current
                 current = current.next
         if found:
-            if previous == None: # Must be first node in list
+            if previous is None: # Must be first node in list
                 self.head = current.next
             else: # In this case node has a previous node
                 previous.next = current.next
@@ -86,27 +86,33 @@ class LinkedList:
 
 | Case | Complexity | Explanation |
 |---|---|---|
-| `add(item)` | $O(1)$ |  |
-| `remove(item)` | $O(n)$ |  |
-| `search(item)` | $O(n)$ |  |
+| `add(item)` | $O(1)$ | Inserting at the head only updates pointers (head and next), no traversal needed. |
+| `remove(item)` | $O(n)$ | In the worst case, you may need to traverse the entire list to find the item. |
+| `search(item)` | $O(n)$ | Must potentially check every node until the item is found or list ends. |
 
 ---
-
 
 ## Space Complexity
 
 | Space Complexity | Explanation |
 |---|---|
-| $O(n)$ | |
+| $O(n)$ | Each node stores one item and a reference to the next node, so memory grows linearly with the number of elements. |
 
 ---
 
-## Why use a linkedlist?
-- You might already realise that the time complexity of a basic array-based list is the same as the linkedlist. Both add in $0(1)$, linked lists adding to the start and array-based lists as the end, and both require $0(n)$ for removing/searching for a specific item.
+## Why use a Linked List?
+- You might already realise that the time complexity of a basic array-based list is similar to that of a linked list in some cases. Both allow O(1) insertion, but in different ways: linked lists insert at the head, while array-based lists typically insert at the end (amortised O(1)). However, both require O(n) time for searching and removing a specific item, since they may need to traverse the entire structure.
+- The key advantage of a linked list is flexibility in memory management. Unlike arrays, linked lists do not require contiguous memory, making them useful when memory is fragmented or when the size of the data structure is unknown in advance.
+- **Understanding the underlying functionality of a linked list is important for better understanding the next topic, binary trees.**
 
-1. 
+---
 
-> Notes: Whenever altering a linked list, **always** make sure there will be a link between the nodes before changing them, if you lose one chained link, the list is gone. 
-> For example, if you're trying to remove a node, make sure to update the previous pointer to the *removing_node*'s next first, because if you set the *removing_node*'*s next to none, you will lose the other end in memory.
+![Linked List Visualisation](/visualisations/linked_list.png)
 
-> When we remove a value, we just remove it from the theoretical linked list, even though it still exists now somewhere in memory, we just ignore it as a garbage value. 
+---
+
+> Notes: When modifying a linked list, it is important to always ensure that the links between nodes are maintained before changing them. If a link is lost, the rest of the list can become inaccessible.
+
+> For example, when removing a node, you should first update the previous node’s `next` reference to point to the node after the one being removed. If you instead set the removing node’s `next` to `None` first, you lose access to the rest of the list.
+
+> When a value is removed, it is no longer part of the logical linked list, even though the node may still exist in memory. It is simply treated as no longer accessible through the list, and will eventually be cleaned up by garbage collection if no other references exist.
