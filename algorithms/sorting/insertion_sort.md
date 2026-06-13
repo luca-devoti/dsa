@@ -6,8 +6,8 @@
 ---
 
 ## Key Idea
-- The array is divided into a **sorted** (left) and **unsorted** (right) portion.
-1. Select the first element from the unsorted portion.
+- The array is divided into a **sorted** (left) and **unsorted** (right) portion, where the sorted portion initially contains the element at index 0.
+1. The outer loop selects the first element from the unsorted portion.
 2. Compare the selected element with elements in the sorted portion, moving from right to left.
 3. While an element in the sorted portion is greater than the selected element, shift it one position to the right.
 4. Continue shifting elements until an element smaller than or equal to the selected element is found, or the beginning of the array is reached.

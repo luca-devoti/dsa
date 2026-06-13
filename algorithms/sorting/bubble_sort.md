@@ -8,14 +8,14 @@
 ## Key Idea
 - Bubble Sort has two variations: standard and optimised.
 - This example demonstrates the steps of the **standard** algorithm.
-- The array is divided into a **sorted** and **unsorted** portion.
-    - The sorted portion grows from the right.
-    - The unsorted portion shrinks from the left.
+- The array is divided into a **sorted** (right) and **unsorted** (left) portion.
+    - The entire array initially starts in the unsorted portion, and shrinks toward the left (start of the array).
+    - The sorted portion grows from the right (end of the array).
 
-1. Compare adjacent elements in the unsorted portion of the array.
+1. The inner loop compares adjacent elements in the unsorted portion of the array.
 2. If the left element is greater than the right element, swap them.
 3. Continue through the unsorted portion, causing the largest value to “bubble” to the end of the array.
-4. Shrink the unsorted portion by one element.
+4. The outer loop shrinks the unsorted portion by one element.
 5. Repeat until the array is sorted.
 
 ---
